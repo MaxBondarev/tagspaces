@@ -1910,13 +1910,15 @@ export const actions = {
       }
       if (fsEntry.isFile) {
         const { warningOpeningFilesExternally } = getState().settings;
-        PlatformIO.openFile(fsEntry.path, warningOpeningFilesExternally);
+        //PlatformIO.openFile(fsEntry.path, warningOpeningFilesExternally);
+        PlatformIO.openFile(fsEntry.path);
       } else {
         PlatformIO.openDirectory(fsEntry.path);
       }
     } else {
       const { warningOpeningFilesExternally } = getState().settings;
-      PlatformIO.openFile(selectedFile, warningOpeningFilesExternally);
+      //PlatformIO.openFile(selectedFile, warningOpeningFilesExternally);
+      PlatformIO.openFile(selectedFile);
     }
   },
   openLink: (url: string) => (

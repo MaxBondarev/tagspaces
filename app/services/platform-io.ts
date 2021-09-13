@@ -415,11 +415,8 @@ export default class PlatformIO {
   static showInFileManager = (dirPath: string): void =>
     nativeAPI.showInFileManager(dirPath);
 
-  static openFile = (
-    filePath: string,
-    warningOpeningFilesExternally: boolean
-  ): void => {
-    if (
+  static openFile = (filePath: string): void => {
+    /*if (
       !warningOpeningFilesExternally ||
       confirm(
         'Do you really want to open "' +
@@ -428,7 +425,8 @@ export default class PlatformIO {
       )
     ) {
       nativeAPI.openFile(filePath);
-    }
+    }*/
+    nativeAPI.openFile(filePath);
   };
 
   static resolveFilePath = (filePath: string): string =>
